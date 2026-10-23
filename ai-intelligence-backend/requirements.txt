@@ -1,0 +1,23 @@
+# ChhayaRakshak AI — AI backend dependencies
+# Pin minor versions; update deliberately.
+
+# Web framework
+fastapi==0.115.12
+uvicorn[standard]==0.34.3
+python-multipart==0.0.32   # required by FastAPI for UploadFile / multipart forms
+
+# Gemini SDK (current official SDK — replaces deprecated google-generativeai)
+google-genai==2.31.0
+
+# Settings / env management
+pydantic-settings==2.9.1
+python-dotenv==1.1.0
+
+# File type validation (checks magic bytes, not just extension)
+python-magic-bin==0.4.14 ; sys_platform == "win32"
+python-magic==0.4.27     ; sys_platform != "win32"
+
+# Testing
+pytest==8.3.5
+pytest-asyncio==0.25.3
+httpx==0.28.1            # ASGI test client for FastAPI

@@ -1,0 +1,23 @@
+# ChhayaRakshak AI — Member 2: Weather & Risk Assessment
+# Isolated development dependencies
+#
+# NOTE: This requirements.txt is for Member 2's isolated dev environment ONLY.
+# It is intentionally separate from ai-intelligence-backend/requirements.txt
+# and must not be merged until team integration is agreed.
+
+# Web framework (match version used by ai-intelligence-backend to ease merge)
+fastapi==0.115.12
+uvicorn[standard]==0.34.3
+
+# Settings / env management
+pydantic-settings==2.9.1
+python-dotenv==1.1.0
+
+# HTTP client (for calling Open-Meteo external weather API)
+httpx==0.28.1
+
+# Testing
+pytest==8.3.5
+pytest-asyncio==0.25.3
+anyio[trio]==4.9.0
+# httpx is also the ASGI test client for FastAPI (already listed above)
